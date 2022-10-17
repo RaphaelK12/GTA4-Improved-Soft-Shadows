@@ -92,7 +92,7 @@
 
 	// added this
 	def c96, -1, 0, 1, 2 	// pixels offsets
-    def c97,  0.250, 1.0, 0.25, 1 // texture rescale multiplicator (the shader is made to work with a square texture, but provides a 4x larger in horizontal)
+    def c97,  0.1250, 0.5, 0.25, 1 // texture rescale multiplicator (the shader is made to work with a square texture, but provides a 4x larger in horizontal)
 
     dcl_texcoord v0.xy
     dcl_texcoord1 v1
