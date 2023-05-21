@@ -77,7 +77,7 @@
 	
 	// added this
 	def c96, -1, 0, 1, 2 	// pixels offsets
-    def c97,  0.250, 1.0, 0.25, 1 // texture rescale multiplicator (the shader is made to work with a square texture, but provides a 4x larger in horizontal)
+    def c97,  0.375, 1.5, 0.25, 1 // texture rescale multiplicator (the shader is made to work with a square texture, but provides a 4x larger in horizontal)
     def c98, 12.9898, 78.233, 33718.5453, 43758.5453		// rand constants
     def c99, 2.0, -1.0, 0.0, 0.0
 	
