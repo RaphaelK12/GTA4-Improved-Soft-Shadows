@@ -58,7 +58,7 @@
     def c1, 0.25, 256, -127.999992, 9.99999975e-006
     def c2, 1.33333337, 9.99999975e-005, 512, 1
     // def c3, 1, 0, 1.5, 0.0833333358 		//  1/9  samples
-    def c3, 1, 0, 1.5, 0.03125				//  1/32 samples
+    def c3, 1, 0, 1.5, 0.0175438596 		// 1/57 samples
     def c4, -0.5, 0.5, 0.0199999996, 0.00999999978
     def c5, 4, 0.75, 0.25, 5
     def c6, 10, 0, 0, 0
@@ -73,40 +73,41 @@
     def c13, -0.1631059945, -0.811619998, -0.4200719895, -0.147159994	
 	
 	// New poison Disk 57 samples (rescaled x/2, y*2)
-	def c101, 0.0000,  0.0000,  0.1875, -0.5000 
-	def c102, 0.0000,  0.2500,  0.2500,  0.0000 
-	def c103, 0.0000,  0.5000,  0.2500,  0.2500 
-	def c104, 0.0000,  0.7500,  0.2500, -0.2500 
-	def c105, 0.0000,  1.0000, -0.0625,  0.0000 
-	def c106, 0.0000, -0.2500, -0.0625,  0.2500 
-	def c107, 0.0000, -0.5000, -0.0625,  0.5000 
-	def c108, 0.0000, -0.7500, -0.0625,  0.7500 
-	def c109, 0.0000, -1.0000, -0.0625,  1.0000 
-	def c100, 0.0625,  0.0000, -0.0625, -0.2500 
-	def c111, 0.0625,  0.2500, -0.0625, -0.5000 
-	def c112, 0.0625,  0.5000, -0.0625, -0.7500 
-	def c113, 0.0625,  0.7500, -0.0625, -1.0000 
-	def c114, 0.0625,  1.0000, -0.1250,  0.0000 
-	def c115, 0.0625, -0.2500, -0.1250,  0.2500 
-	def c116, 0.0625, -0.5000, -0.1250,  0.5000 
-	def c117, 0.0625, -0.7500, -0.1250,  0.7500 
-	def c118, 0.0625, -1.0000, -0.1250, -0.2500 
-	def c119, 0.1250,  0.0000, -0.1250, -0.5000 
-	def c120, 0.1250,  0.2500, -0.1250, -0.7500 
-	def c121, 0.1250,  0.5000, -0.1875,  0.0000 
-	def c122, 0.1250,  0.7500, -0.1875,  0.2500 
-	def c123, 0.1250, -0.2500, -0.1875,  0.5000 
-	def c124, 0.1250, -0.5000, -0.1875, -0.2500 
-	def c125, 0.1250, -0.7500, -0.1875, -0.5000 
-	def c126, 0.1875,  0.0000, -0.2500,  0.0000 
-	def c127, 0.1875,  0.2500, -0.2500,  0.2500 
-	def c128, 0.1875,  0.5000, -0.2500, -0.2500 
-	def c129, 0.1875, -0.2500,                                       57.00,  0.0175438596 // 1/57 samples
+	def c101, -1.00,  0.25,  0.00,  0.25   
+	def c102, -1.00,  0.00,  0.00,  0.50   
+	def c103, -1.00, -0.25,  0.00,  0.75   
+	def c104, -0.75,  0.50,  0.00,  1.00   
+	def c105, -0.75,  0.25,  0.25,  1.00   
+	def c106, -0.75,  0.00,  0.25,  0.75   
+	def c107, -0.75, -0.25,  0.25,  0.50   
+	def c108, -0.75, -0.50,  0.25,  0.25   
+	def c109, -0.50,  0.75,  0.25,  0.00   
+	def c100, -0.50,  0.50,  0.25, -0.25   
+	def c111, -0.50,  0.25,  0.25, -0.50   
+	def c112, -0.50,  0.00,  0.25, -0.75   
+	def c113, -0.50, -0.25,  0.25, -1.00   
+	def c114, -0.50, -0.50,  0.50,  0.75   
+	def c115, -0.50, -0.75,  0.50,  0.50   
+	def c116, -0.25,  1.00,  0.50,  0.25   
+	def c117, -0.25,  0.75,  0.50,  0.00   
+	def c118, -0.25,  0.50,  0.50, -0.25   
+	def c119, -0.25,  0.25,  0.50, -0.50   
+	def c120, -0.25,  0.00,  0.50, -0.75   
+	def c121, -0.25, -0.25,  0.75, -0.50   
+	def c122, -0.25, -0.50,  0.75, -0.25   
+	def c123, -0.25, -0.75,  0.75,  0.00   
+	def c124, -0.25, -1.00,  0.75,  0.25   
+	def c125,  0.00, -1.00,  0.75,  0.50   
+	def c126,  0.00, -0.75,  1.00,  0.25   
+	def c127,  0.00, -0.50,  1.00,  0.00   
+	def c128,  0.00, -0.25,  1.00, -0.25   
+	def c129,  0.00,  0.00,                                         57.00,  0.0175438596 // 1/57 samples
 	// def c129,  0.00,  1.00, 57.0,  0.0175438596 // 1/57 samples
 
 	// added this
 	def c96, -1, 0, 1, 2 	// pixels offsets
-    def c97,  0.250, 1.0, 0.25, 1 // texture rescale multiplicator (the shader is made to work with a square texture, but provides a 4x larger in horizontal)
+	// the shader is made to work with a square texture, but provides a 4x larger in horizontal
+    def c97,  0.250, 1.0, 5.0, 1 // xy is texture scale multiplicator, z main filter size, w not used yet.
 
     dcl_texcoord v0.xy
     dcl_texcoord1 v1
@@ -140,343 +141,346 @@
     mad r0.zw, r1.xyxy, r2.xyxy, r3.xyxy
     mov r1.y, c53.y
 	
-
-    mad r2.xy, r1.y, c101.xy, r0.zw
+	// new, using r10+ registers 
+	mul r10.xy, r1.yy, c97.xy		// filter xy
+	mul r10.xy, r10.xy, c97.z		// filter scale
+	
+    mad r2.xy, r10.xy, c101.xy, r0.zw
     texld r2, r2, s15
     add r1.x, r1.z, -r2.x
     cmp r1.x, r1.x, c3.x, c3.y
 
-    mad r2.xy, r1.y, c101.zw, r0.zw
+    mad r2.xy, r10.xy, c101.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c102.xy, r0.zw
+    mad r2.xy, r10.xy, c102.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c102.zw, r0.zw
+    mad r2.xy, r10.xy, c102.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c103.xy, r0.zw
+    mad r2.xy, r10.xy, c103.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c103.zw, r0.zw
+    mad r2.xy, r10.xy, c103.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c104.xy, r0.zw
+    mad r2.xy, r10.xy, c104.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c104.zw, r0.zw
+    mad r2.xy, r10.xy, c104.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c105.xy, r0.zw
+    mad r2.xy, r10.xy, c105.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c105.zw, r0.zw
+    mad r2.xy, r10.xy, c105.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c106.xy, r0.zw
+    mad r2.xy, r10.xy, c106.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c106.zw, r0.zw
+    mad r2.xy, r10.xy, c106.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c107.xy, r0.zw
+    mad r2.xy, r10.xy, c107.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c107.zw, r0.zw
+    mad r2.xy, r10.xy, c107.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c108.xy, r0.zw
+    mad r2.xy, r10.xy, c108.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c108.zw, r0.zw
+    mad r2.xy, r10.xy, c108.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c109.xy, r0.zw
+    mad r2.xy, r10.xy, c109.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c109.zw, r0.zw
+    mad r2.xy, r10.xy, c109.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c110.xy, r0.zw
+    mad r2.xy, r10.xy, c110.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c110.zw, r0.zw
+    mad r2.xy, r10.xy, c110.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c111.xy, r0.zw
+    mad r2.xy, r10.xy, c111.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c111.zw, r0.zw
+    mad r2.xy, r10.xy, c111.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c112.xy, r0.zw
+    mad r2.xy, r10.xy, c112.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c112.zw, r0.zw
+    mad r2.xy, r10.xy, c112.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c113.xy, r0.zw
+    mad r2.xy, r10.xy, c113.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c113.zw, r0.zw
+    mad r2.xy, r10.xy, c113.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c114.xy, r0.zw
+    mad r2.xy, r10.xy, c114.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c114.zw, r0.zw
+    mad r2.xy, r10.xy, c114.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c115.xy, r0.zw
+    mad r2.xy, r10.xy, c115.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c115.zw, r0.zw
+    mad r2.xy, r10.xy, c115.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c116.xy, r0.zw
+    mad r2.xy, r10.xy, c116.xy, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y
     add r1.x, r1.x, r1.w
 
-    mad r2.xy, r1.y, c116.zw, r0.zw
+    mad r2.xy, r10.xy, c116.zw, r0.zw
     texld r2, r2, s15
     add r1.w, r1.z, -r2.x
     cmp r1.w, r1.w, c3.x, c3.y    
 			
-	mad r2.xy, r1.y, c117.xy, r0.zw    
+	mad r2.xy, r10.xy, c117.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c117.zw, r0.zw    
+	mad r2.xy, r10.xy, c117.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c118.xy, r0.zw    
+	mad r2.xy, r10.xy, c118.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c118.zw, r0.zw    
+	mad r2.xy, r10.xy, c118.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c119.xy, r0.zw    
+	mad r2.xy, r10.xy, c119.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c119.zw, r0.zw    
+	mad r2.xy, r10.xy, c119.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c120.xy, r0.zw    
+	mad r2.xy, r10.xy, c120.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c120.zw, r0.zw    
+	mad r2.xy, r10.xy, c120.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c121.xy, r0.zw    
+	mad r2.xy, r10.xy, c121.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c121.zw, r0.zw    
+	mad r2.xy, r10.xy, c121.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c122.xy, r0.zw    
+	mad r2.xy, r10.xy, c122.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c122.zw, r0.zw    
+	mad r2.xy, r10.xy, c122.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c123.xy, r0.zw    
+	mad r2.xy, r10.xy, c123.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c123.zw, r0.zw    
+	mad r2.xy, r10.xy, c123.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c124.xy, r0.zw    
+	mad r2.xy, r10.xy, c124.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 
-	mad r2.xy, r1.y, c124.zw, r0.zw    
+	mad r2.xy, r10.xy, c124.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c125.xy, r0.zw    
+	mad r2.xy, r10.xy, c125.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c125.zw, r0.zw    
+	mad r2.xy, r10.xy, c125.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c126.xy, r0.zw    
+	mad r2.xy, r10.xy, c126.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c126.zw, r0.zw    
+	mad r2.xy, r10.xy, c126.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c127.xy, r0.zw    
+	mad r2.xy, r10.xy, c127.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c127.zw, r0.zw    
+	mad r2.xy, r10.xy, c127.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c128.xy, r0.zw    
+	mad r2.xy, r10.xy, c128.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 		
-	mad r2.xy, r1.y, c128.zw, r0.zw    
+	mad r2.xy, r10.xy, c128.zw, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    
 	add r1.x, r1.x, r1.w    
 
 		
-	mad r2.xy, r1.y, c129.xy, r0.zw    
+	mad r2.xy, r10.xy, c129.xy, r0.zw    
 	texld r2, r2, s15    
 	add r1.w, r1.z, -r2.x    
 	cmp r1.w, r1.w, c3.x, c3.y    

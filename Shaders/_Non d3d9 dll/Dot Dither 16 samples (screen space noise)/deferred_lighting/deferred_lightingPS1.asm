@@ -131,7 +131,8 @@
 	// 00
 	mov r2.xy, r0.zw	// uv to sample
 	// add r4.xy, r2.xy, c8.xy			// add any value
-	
+	mov r10.xy, v0.xy	// uv to sample
+
 	
 	// vec2 rand(vec2 uv){
 		// vec2 a = vec2(12.9898, 78.233);
@@ -144,7 +145,7 @@
 		// return fract(sn *b);
 	// }
 	// calcular o valor de x e y usando a função hash
-	mul r4.xy, r2.xy, c100.xy // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c100.xy // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -157,7 +158,7 @@
 	add r5.x, r1.z, -r6.x
 	cmp r0.z, r5.x, c3.x, c3.y
 	
-	mul r4.xy, r2.xy, c100.yx // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c100.yx // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -171,7 +172,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c100.zw // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c100.zw // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -185,7 +186,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c100.wz // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c100.wz // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -199,7 +200,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c101.xy // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c101.xy // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -213,7 +214,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c101.yx // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c101.yx // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -227,7 +228,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c101.zw // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c101.zw // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -241,7 +242,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c101.wz // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c101.wz // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -255,7 +256,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c102.xy // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c102.xy // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -269,7 +270,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c102.yx // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c102.yx // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -283,7 +284,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c102.zw // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c102.zw // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -297,7 +298,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c102.wz // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c102.wz // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -311,7 +312,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c103.xy // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c103.xy // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -325,7 +326,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c103.yx // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c103.yx // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -339,7 +340,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c103.zw // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c103.zw // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
@@ -353,7 +354,7 @@
 	cmp r5.x, r5.x, c3.x, c3.y
 	add r0.z, r0.z, r5.x
 	
-	mul r4.xy, r2.xy, c103.wz // c98.zw = {33718.5453, 43758.5453}
+	mul r4.xy, r10.xy, c103.wz // c98.zw = {33718.5453, 43758.5453}
 	mov r5.xy, c98.xy // c98.xy = {12.9898, 78.233}
 	dp3 r4.xy, r5.xyz, r4.xyz
 	sincos r6.x, r4.x
