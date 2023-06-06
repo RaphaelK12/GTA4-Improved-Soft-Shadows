@@ -134,6 +134,10 @@
 	mov r10.xy, v0.xy	// uv to sample
 
 	
+	
+	
+	
+	
 	// vec2 rand(vec2 uv){
 		// vec2 a = vec2(12.9898, 78.233);
 		// vec2 b = vec2(43758.5453, 53758.5453);
