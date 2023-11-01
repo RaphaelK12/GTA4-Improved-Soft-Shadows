@@ -1,4 +1,7 @@
 # GTA4-Improved-Soft-Shadows
+## !This is an old/dead repo, use https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix for something better and more up to date!
+
+
 This repository provides some options to improve GTA4 EFLC shadows and remove (reduce) the pixelated aspect.
 
 In the shader folder there are some folders with shader options to use in GTA4, just choose an option and copy the file **"deferred_lighting.fxc"** to the game folder **"GTA_IV\common\shaders\win32_30_atidx10"** (at least it's the folder that game uses for my computer), together it also has the shader assembly to be used with some shader injector.
